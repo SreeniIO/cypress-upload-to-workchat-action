@@ -90,7 +90,8 @@ function run() {
                     messaging_type: 'UPDATE',
                     recipient: { thread_key: channel },
                     message: {
-                        text: "I've got test results coming in from Cypress. Hold tight ..."
+                        text: messageText ||
+                            "I've got test results coming in from Cypress. Hold tight ..."
                     }
                 }),
                 headers: {
