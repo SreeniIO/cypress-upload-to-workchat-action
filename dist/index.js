@@ -72,7 +72,7 @@ function run() {
             const messageText = core.getInput('message-text') ||
                 "A Cypress test just finished. I've placed the screenshots and videos in this thread. Good pie!";
             core.debug(`Token: ${token}`);
-            core.debug(`Channels: ${channel}`);
+            core.debug(`Channel: ${channel}`);
             core.debug(`Message text: ${messageText}`);
             core.debug('Checking for videos and/or screenshots from cypress');
             const videos = (0, walk_sync_1.default)(workdir, { globs: ['**/*.mp4'] });
