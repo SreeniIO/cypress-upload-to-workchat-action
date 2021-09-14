@@ -1,11 +1,24 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Cypress Screenshot & Video Upload to WorkChat'
+branding:
+  icon: file
+  color: blue
+description: 'After running a Cypress test in a Github action, upload the screenshots and videos directly to WorkChat'
 inputs:
-  milliseconds: # change this
+  token:
+    description: 'WorkChat token'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  channel:
+    description: 'WorkChat channel'
+    required: true
+  workdir:
+    description: 'The path of the directory where Cypress stores its screenshots. Defaults to `./cypress`. No trailing slashes, please.'
+    required: false
+  message-text:
+    description: 'Custom WorkChat message text'
+    required: false
+outputs:
+  result:
+    description: 'Result of video and screenshot uploads'
 runs:
-  using: 'node12'
+  using: 'node14'
   main: 'dist/index.js'
