@@ -87,7 +87,7 @@ function run() {
                 return;
             }
             core.debug(`Found ${videos.length} videos and ${screenshots.length} screenshots`);
-            core.debug('Sending initial slack message');
+            core.debug('Sending initial workchat message');
             const resp = yield (0, node_fetch_1.default)(`https://graph.facebook.com/v11.0/me/messages?access_token=${token}`, {
                 method: 'POST',
                 body: JSON.stringify({

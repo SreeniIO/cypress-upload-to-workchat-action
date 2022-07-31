@@ -67,7 +67,7 @@ async function run(): Promise<void> {
       `Found ${videos.length} videos and ${screenshots.length} screenshots`
     )
 
-    core.debug('Sending initial slack message')
+    core.debug('Sending initial workchat message')
 
     const resp = await fetch(
       `https://graph.facebook.com/v11.0/me/messages?access_token=${token}`,
